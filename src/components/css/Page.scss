@@ -1,0 +1,553 @@
+$main_color: #2C2E43;
+$second_color: #20212F;
+$third_color: #f39c12;
+$white: #dcdcdc;
+@import url('https://fonts.googleapis.com/css2?family=K2D&display=swap');
+
+@mixin titleBasic($font-size) {
+  font-size: $font-size;
+  font-family: 'turret_roadregular';
+  font-weight: bold;
+}
+
+@mixin colorFirstLetter($element...) {
+  @for $i from 0 to length($element) {
+    #{nth($element, $i + 1)}::first-letter {
+      color: $third_color;
+    }
+  }
+}
+
+@mixin animation($animation){
+  animation:$animation;
+  -webkit-animation:$animation;
+}
+
+@include colorFirstLetter(".title", ".subTitle", ".projectTitle", ".title-footer", ".projectElem + p") 
+@mixin titlePositionTop {
+  position: absolute;
+  top: 1vh;
+}
+
+@mixin cornerCutClip($shape) {
+  clip-path: polygon($shape);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: $second_color;
+  font-family: 'K2D', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: $white;
+  margin: 0;
+}
+
+.container {
+  width: 95vw;
+  height: 95vh;
+  background-color: $main_color;
+  border-radius: 0.2rem;
+  @include cornerCutClip((0 0, 89% 0, 100% 10%, 100% 100%, 12% 100%, 0 89%));
+}
+
+.menu {
+  position: sticky;
+  display: flex;
+  top: 0;
+  left: 0;
+  z-index: 1005;
+  align-items: center;
+  color: $white;
+
+  &>svg {
+    background: $main_color;
+    padding: 0 10px 0 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    width: 3vw;
+    height: 3vw;
+
+    &:hover {
+      color: $third_color;
+    }
+  }
+
+  &>svg:hover+div {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+  }
+
+  &>div {
+    display: none;
+
+    &:hover {
+      display: flex;
+    }
+  }
+
+  &>div>a {
+    text-align: center;
+    color: $white;
+    background: $main_color;
+    padding: 9px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+    &:hover:first-letter {
+      color: $third_color;
+    }
+  }
+}
+
+.buttontoNextDiv {
+  position: absolute;
+  z-index: 100;
+  color: $white;
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  @include animation((toNextDiv 2s ease-in infinite));
+}
+
+.nextDiv {
+  height: 1.5vw;
+  width: 1.5vw;
+
+  &:hover {
+    color: $third_color;
+  }
+}
+
+.nextDivButtonWrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.svg-inline--fa.fa-w-14 {
+  width: 1.5vw;
+}
+
+
+header>div {
+  background: $main_color;
+  padding: 10px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 0.2rem;
+  @include cornerCutClip((0 0, 96% 0, 100% 10%, 100% 100%, 3% 100%, 0 90%));
+}
+
+.title {
+  @include titleBasic(2em);
+  @include titlePositionTop;
+  margin: 0;
+}
+
+.lilTitle {
+  @include titleBasic(1em);
+  text-align: center;
+}
+
+.subTitle {
+  text-align: center;
+}
+
+.title-footer {
+  @include titleBasic(2em);
+  margin: 0;
+}
+
+.projectTitle {
+  @include titleBasic(2em);
+  @include titlePositionTop;
+
+  &:nth-child(1) {
+    right: 60%;
+  }
+
+  &:nth-child(2) {
+    left: 60%;
+  }
+
+  &:hover {
+    color: $third_color;
+    cursor: pointer;
+  }
+}
+
+
+.titleDiv {
+  width: 100%;
+}
+
+.hello {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  margin-top: -3vw;
+  z-index: 15;
+}
+
+ul {
+  list-style: none;
+  color: $third_color;
+
+  li {
+    margin-left: 20px;
+    color: $white;
+    position: relative;
+    padding-left: 1em;
+
+    &:after {
+      content: '';
+      height: .4em;
+      width: .4em;
+      background: $third_color;
+      display: block;
+      position: absolute;
+      transform: rotate(45deg);
+      top: .4em;
+      left: 0;
+    }
+  }
+}
+
+.interestList {
+  flex-direction: column;
+}
+
+.hello-text {
+  font-size: 45px;
+  font-weight: bold;
+  display:flex;
+}
+.nom {
+  @include animation((typing 2s steps(16) , blink 2s steps(16) forwards));
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid;
+  color: $third_color;
+  margin-left:10px;
+  width: 28vw;
+}
+
+@keyframes typing {
+  from {
+    width: 0
+  }
+
+}
+    
+@keyframes blink {
+  100% {
+    border-color: transparent
+  }
+}
+
+#skills,
+#education,
+.container,
+#about-me,
+#project {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+
+#writing,
+#reading {
+  width: 4em;
+  height: 4em;
+  margin: 0 20px 0 20px;
+}
+
+.englishLevelWrapper {
+  display: flex;
+}
+
+.englishLevelTextWrapper {
+  position: relative
+}
+
+.englishLevelTextWrapper>p {
+  position: absolute;
+  top: 0;
+  left: 27px;
+  font-size: 11px;
+  text-align: center;
+}
+
+.wrapperDivSkills {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+    'a b'
+    'a d';
+
+  &>div:first-of-type {
+    height: 80vh;
+  }
+}
+
+
+.gridSkills {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: repeat(auto-fill, auto);
+  max-width: inherit;
+  width: 100%;
+}
+
+.elemDiv {
+  display: flex;
+  place-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+a {
+  color: $third_color;
+  text-decoration: none;
+}
+
+.progressBar {
+  background: rgba(0, 0, 0, 1);
+  border-radius: 100px;
+  height: 20px;
+  width: 15vw;
+  display: flex;
+  color: white;
+
+  &::nth-child(2) {
+    font-size: initial;
+  }
+}
+
+.progressValue {
+  border-radius: 100px;
+  height: inherit;
+  width: 0;
+  background: $third_color;
+}
+
+
+.educationWrapper,
+.aboutMeWrapper {
+  max-width: 90vw;
+  width: 90vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  align-content: center;
+
+}
+
+.aboutMeWrapper {
+  max-width: 90vw;
+  width: 90vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.aboutMeWrapper>p {
+  margin: 0;
+  text-align: justify;
+  margin: 0 auto;
+  width: 45vw;
+  font-size: 1em;
+}
+
+.baseDivSkills {
+  font-size: 22px;
+  max-width: 40vw;
+  width: 40vw;
+  background-color: $second_color;
+  margin: 20px;
+  border-radius: 0.2rem;
+  display: flex;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.education-text {
+  padding: 20px;
+}
+
+.educationElemWrapper {
+  display: flex;
+  width: 100%;
+  background: $second_color;
+}
+
+.educationdiv1 {
+  border: 0.5px rgba(255, 255, 255, 0.3) solid;
+}
+
+.educationdiv2 {
+  border-top: 0.5px rgba(255, 255, 255, 0.3) solid;
+  border-bottom: 0.5px rgba(255, 255, 255, 0.3) solid;
+}
+
+.educationdiv3 {
+  border-top: 0.5px rgba(255, 255, 255, 0.3) solid;
+  border-bottom: 0.5px rgba(255, 255, 255, 0.3) solid;
+  border-right: 0.5px rgba(255, 255, 255, 0.3) solid;
+}
+
+.projectWrapper {
+  height: 70vh;
+  width: 80vw;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .projectElem {
+    background: $second_color;
+    justify-content: center;
+    text-align: center;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    font-size: 25px;
+    width: 25vh;
+    height: 35vh;
+    margin: 0 20px 0 20px;
+    border-radius: 0.2rem;
+
+    &:hover {
+      background: radial-gradient(circle, rgba(0, 0, 0, 1) 0%, rgba(32, 33, 47, 1) 70%);
+      font-size: 27px;
+      transition: font-size 0.5s ease-out;
+    }
+  }
+
+}
+
+.projectDesc {
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: $second_color;
+  font-size: 22px;
+  border-radius: 0.2rem;
+
+  &>p:nth-of-type(1) {
+    @include titlePositionTop;
+  }
+
+  &>a {
+    position: absolute;
+    bottom: 3vh;
+  }
+}
+
+.closeButton {
+  position: absolute;
+  top: 1vh;
+  right: 1vh;
+  fill: $third_color;
+}
+
+.active {
+  color: $third_color;
+}
+
+header,
+#skills,
+#education,
+#about-me,
+#project {
+  width: 100vw;
+  height: 100vh;
+  -webkit-filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.24));
+  filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.24));
+}
+
+footer {
+  margin-top: 5vh;
+  max-width: 100vw;
+  height: 15vh;
+  display: flex;
+  flex-direction: row;
+  background-color: $main_color;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.24);
+}
+
+.contact-icon {
+  margin: 0 15px 0 15px;
+  display: inline-block;
+  width: 44px;
+  height: 44px;
+}
+
+.contactDiv,
+.myCVdiv {
+  width: 50vw;
+  height: inherit;
+  text-align: center;
+}
+
+
+.icon-linkdin {
+  background-image: url("../../assets/icon-linkdin.png");
+  background-size: cover;
+}
+
+.icon-email {
+  background-image: url("../../assets/icon-email.png");
+  background-size: cover;
+}
+
+.icon-dl {
+  background-image: url("../../assets/icon-dl.png");
+  background-size: cover;
+}
+
+@keyframes background {
+
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+@-webkit-keyframes toNextDiv {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes toNextDiv {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}

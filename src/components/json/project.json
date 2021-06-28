@@ -1,0 +1,41 @@
+{
+  "projet-cours": [
+    {
+      "name": "Projet de DUT Fin d'Étude-Transition JS",
+      "desc": "L'objectif de ce projet était d'apporter une amélioration au programme de mon  professeur tuteur, qui permettait de réaliser des diaporamas, mais en utilisant les langages web (HTML, CSS, JS) et donc réaliser des diaporamas sur une page web.\nLes améliorations que j'ai apportés sont :\n\nLa possibilité de pouvoir enregistrer les actions effectuées sur la page, étant donné que les actions utilisables pour pouvoir par exemple, afficher l'élément suivant sont déjà définis par le code mon professeur. Les actions effectuées sur la page sont enregistrées dans un fichier JSON qui contient la touche appuyée ainsi que la seconde ou l'action a été effectuée.\nLa possibilité de pouvoir enregistrer sa voix (à l'aide d'un micro). Le fichier audio est enregistré au format webm.\nLa possibilité de pouvoir jouer ce qui a été enregistré sur la page, pour voir le diaporama complet.\n",
+      "link": "https://github.com/Hanasagi/transitionJS/tree/Quentin"
+    },
+    {
+      "name": "Projet de DUT S4-Katana",
+      "desc": "Ce projet avait pour but de réaliser un programme Java permettant de jouer au jeu de cartes Katana avec une interface graphique réalisé en JavaFX, ainsi qu'avec une application mobile permettant de voir les cartes de son deck.\n\nNous avions formé des équipes pour réaliser les différentes parties. Je m'occupais de l'équipe devant réalisé l'interface graphique du programme Java et de l'application mobile. Je m'occupais personnellement seulement de la partie JavaFX.",
+      "link": ""
+    },
+    {
+      "name": "Projet de DUT S4-AR Hololens",
+      "desc": "L'objectif de ce projet était de réaliser un jeu en Réalité Augmentée similaire à Pokemon GO avec le Microsoft HoloLens (1re génération). Nous avons choisi d'utiliser Unity, car c'était le plus simple d'utilisation et il possédait le plus de librairie pour l'AR. Nos objectifs principaux étaient de pouvoir capturer des monstres, avoir une gestion d'inventaires avec plusieurs types pièges et d'appâts pour faciliter la capture. Avec la possibilité d'accéder aux différents menus, soit avec un \"clic\" des doigts soit avec une commande vocale.\n\n\n\nJe me suis principalement occupé de l'interface graphique du jeu, en créant un menu pour l'inventaire, ainsi que l'adaptation des menu pour être utilisable avec le système de l'HoloLens.",
+      "link": ""
+    },
+    {
+      "name": "Projet de DUT S3-AMC",
+      "desc": "L'objectif de ce projet était de pouvoir crée des PDF type examen de DUT, ainsi que de pouvoir les corriger automatiquement ces dit PDF (similaire à Auto Multiple Choice).\n\nJe me suis personnellement occupé principalement de la mise en page (en utilisant OpenCV) des différents éléments composants le PDF :\n\nL'entête avec une zone quadrillé permettant de rentrer le numéro étudiant, son nom, la note\nLa zone des questions, composé de QCM/QCU\nLes questions pouvait être affiché sur une ou deux colonnes, de même pour les réponses, selon les paramètres données",
+      "link": ""
+    }
+  ],
+  "projet-perso": [
+    {
+      "name": "Site Blindtest-Mekura",
+      "desc": "L'objectif de ce projet est d'avoir deux choses :\n\nUn site web, comprenant des \"rooms\" pour pouvoir jouer à plusieurs. J'ai utilisé l'Oauth2 de Discord pour pouvoir se connecter au site. Les rooms sont créés et gérés par SocketIO, les musiques sont stockées sur une base de données MySQL. L'idée du jeu sur le site est simple, une musique est choisie, la vidéo se joue se joue et on peut répondre dans une text box. À la fin de la musique, les réponses de tout le monde sont révélées et on voit qui a faux ou juste.\nUn bot discord, qui joue l'audio de la musique dans les canaux vocaux. (Pas encore réalisé)\n\nJ'ai choisi d'utiliser React et Spring Boot, car je voulais voir comment fonctionnais ces deux frameworks.\n\nJ'ai aussi appris à utiliser Docker et ai rajouté un docker compose pour rajouter le backend et le frontend, ainsi que MySQL et PhpMyAdmin dans une seule image.",
+      "link": "https://github.com/Hanasagi/Mekura-Website"
+    },
+    {
+      "name": "Extension Chrome-Pixiv Overlay",
+      "desc": "L'objectif principal était de pouvoir récupérer à l'aide de web scraping les informations du wiki pour les stocker de mon côté et ainsi pour les afficher sur demande à l'aide d'une commande comprenant l'information demandée (le nom d'un personnage, d'un équipement, etc). Puis j'ai rajouté une fonction permettant d'afficher des dessins (principalement fanart) sur Discord en utilisant l'API du site Danbooru et la possibilité de \"s'abonner\" à un personnage pour être notifié lorsqu'une image de ce dernier apparaît. Je travaille toujours dessus et prévois toujours des choses à rajouter.",
+      "link": "https://github.com/Hanasagi/PixivImageOverlay"
+    },
+    {
+      "name": "Bot Discord-Newcastle",
+      "desc": "L'objectif de cette extension était d'avoir un overlay qui s'affiche par-dessus les pages ayant une collection d'images. Pour éviter d'avoir à scroll, car une collection peut avoir jusqu'à 100 images, l'overlay affichait une image à la fois et il est possible de naviguer avec les flèches directionnelles ou avec le clic gauche. L'overlay possède aussi un panel avec les vignettes des images pour avoir moins de scroll à faire, avec la possibilité de cliquer sur n'importe lesquelles d'entre elles pour afficher l'image.\nLien du projet : https://github.com/Hanasagi/PixivImageOverlay",
+      "link": "https://github.com/Hanasagi/Newcastle"
+    }
+  ]
+}

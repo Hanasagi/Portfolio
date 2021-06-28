@@ -1,0 +1,68 @@
+{
+  "language-it": [
+    {
+      "name":"Javascript",
+      "level": "60"
+    },
+    {
+      "name":"React",
+      "level": "30"
+    },
+    {
+      "name":"Vue",
+      "level": "30"
+    },
+     {
+      "name":"HTML5/CSS3",
+      "level": "50"
+    },
+    {
+      "name":"PHP",
+      "level": "40"
+    },
+    {
+      "name":"Python",
+      "level": "40"
+    },
+    {
+      "name":"Java",
+      "level": "60"
+    },
+    {
+      "name":"Spring Boot",
+      "level": "30"
+    },
+    {
+      "name":"SQL",
+      "level": "70"
+    }
+  ],
+  "language": [
+    {
+      "name":"Anglais",
+      "level": "Score TOEIC (2020); Ecoute: 450 (B2); Lecture: 455 (C1)"
+    },
+    {
+      "name":"Italien",
+      "level": "Notion"
+    },
+    {
+      "name":"Japonais",
+      "level": "Notion"
+    }
+  ],
+  "other": [
+    {
+      "name":"Git",
+      "level": "50"
+    },
+    {
+      "name":"Docker",
+      "level": "30"
+    },
+    {
+      "name":"Photoshop",
+      "level": "50"
+    }
+  ]
+}
