@@ -239,7 +239,7 @@ export default {
       if(type=="school"){
         this.$refs.schoolProjectTitle.classList.add("active")
         this.$refs.personalProjectTitle.classList.remove("active")
-        if(window.innerWidth>414){
+        if(window.innerWidth>600){
           this.cssText(this.$refs.schoolProject,"display:flex")
         }else{
           this.cssText(this.$refs.schoolProject,"display:grid")
@@ -248,7 +248,7 @@ export default {
       }else{
         this.$refs.schoolProjectTitle.classList.remove("active")
         this.$refs.personalProjectTitle.classList.add("active")
-         if(window.innerWidth>414){
+         if(window.innerWidth>600){
           this.cssText(this.$refs.personalProject,"display:flex")
         }else{
           this.cssText(this.$refs.personalProject,"display:grid")

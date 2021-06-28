@@ -113,6 +113,88 @@
 	}
 }
 
+@media screen and (max-width:486px){
+	.svg-inline--fa.fa-w-14 {
+		width:3.5vw;
+	}
+	.menu > svg{
+		height:7.5vw;
+	}
+	.menu > div{
+		@include fsize(10px);
+	}
+	.hello-text{
+		@include fsize(23px);
+	}
+	.baseDivSkills{
+		@include fsize(18px);
+	}
+	.wrapperDivSkills{
+		grid-template-columns:none;
+		grid-template-rows:none;
+		grid-template-areas:
+        'a'
+        'b'
+        'd';
+	}
+	.wrapperDivSkills>.baseDivSkills{
+		max-width: 80vw;
+    	width: 80vw;
+	}
+	.wrapperDivSkills>div:first-of-type{
+		height:50vh;
+	}
+	.aboutMeWrapper>div{
+		max-width:56vw;
+		width:56vw;
+	}
+	.nextDiv{
+		display:none;
+	}
+	.education{
+		@include fsize(12px);
+	}
+	#skills{
+		height:155vh;
+	}
+	#skills > .container {
+		height:150vh;
+	}
+	.projectTitle{
+		@include fsize(1em);
+	}
+	.projectTitle:last-of-type{
+		left: 50%;
+	}
+	.projectWrapper{
+		@include fsize(15px);
+		display:grid;
+		grid-template-columns:repeat(2,1fr);
+	}
+	.projectWrapper .projectElem {
+		font-size: 18px;
+		width: 15vh;
+    	height: 18vh;
+    	margin: 20px;
+	}
+	.title-footer{
+		@include fsize(1em);
+	}
+	.contact-icon{
+		width:30px;
+		height:30px;
+	}
+	.progressBar {
+		width:30vw;
+	}
+	.englishLevelTextWrapper>p{
+  		@include fsize(13px)
+	}
+	.nom {
+    width: 37vw;
+}
+}
+
 @media screen and (max-width:414px){
 	.svg-inline--fa.fa-w-14 {
 		width:3.5vw;
