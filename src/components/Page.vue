@@ -88,8 +88,6 @@ export default {
         let text1 = document.createElement("p")
         let text2 = document.createElement("p")
         let text3 = document.createElement("p")
-        console.log(text)
-        console.log(otherText)
         text1.innerHTML = text[0].replace(":"," ").trim()
         this.cssText(text1,"margin:0;")
         text2.innerHTML = otherText[0].replace(":"," ").trim()

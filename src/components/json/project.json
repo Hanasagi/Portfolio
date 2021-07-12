@@ -19,13 +19,13 @@
       "langage":"Vue"
     },
     {
-      "name":"Calculatrice",
+      "name":"Calculatrice-Challenge",
       "desc":"Challenge du site Frontend Mentor https://www.frontendmentor.io/challenges/calculator-app-9lteq5N29",
       "link":"https://calculator-hanasagi.netlify.app",
       "langage":"Vue, Sass"
     },
     {
-      "name":"Compte à rebours",
+      "name":"Compte à rebours-Challenge",
       "desc":"Challenge du site Frontend Mentor https://www.frontendmentor.io/challenges/launch-countdown-timer-N0XkGfyz-",
       "link":"https://countdown-hanasagi.netlify.app",
       "langage":"Vue, Sass"
