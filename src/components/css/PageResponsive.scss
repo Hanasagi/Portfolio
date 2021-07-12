@@ -29,9 +29,7 @@
   		left: 33px;
     @include fsize(25px)
 	}
-	.nom {
-		width:20vw;
-	}
+
 	.progressBar>div:last-of-type{
 		font-size:18px;
 	}
@@ -48,9 +46,7 @@
 	.progressBar > div:nth-child(2){
 		@include fsize(16px)
 	}
-	.nom {
-		width:19vw;
-	}
+
 }
 @media screen and (max-width:1680px){
 	.menu > div{
@@ -59,9 +55,7 @@
 	.englishLevelTextWrapper>p{
   		@include fsize(14px)
 	}
-	.nom {
-    width: 21vw;
-}
+
 }
 
 @media screen and (max-width:1440px) {
@@ -74,11 +68,12 @@
 	.englishLevelTextWrapper>p{
   		@include fsize(14px)
 	}
-	.nom {
-		width:25vw;
-	}
+
 	.englishLevelTextWrapper > p {
     font-size: 12px;
+}
+.imgIT {
+    height: 85px;
 }
 }
 @media screen and (max-width:1366px){
@@ -88,9 +83,7 @@
 	.englishLevelTextWrapper>p{
   		left: 28px;
 	}
-	.nom {
-		width:26vw;
-	}
+
 }
 @media screen and (max-width:1280px){
 	.menu > div{
@@ -105,11 +98,22 @@
 		.englishLevelTextWrapper>p{
   		@include fsize(12px)
 	}
+	.imgIT {
+    height: 68px;
+}
 }
 
-@media (max-height:600px) and (max-width:1280px){
-	.menu > div,.baseDivSkills,.projectWrapper{
-		@include fsize(16px)
+@media screen and (max-width:1280px){
+.projectWrapper{
+		@include fsize(15px);
+		display:grid;
+		grid-template-columns:repeat(2,1fr);
+	}
+	.projectWrapper .projectElem {
+		font-size: 20px;
+    width: 23vh;
+    height: 23vh;
+    margin: 20px;
 	}
 }
 
@@ -190,9 +194,7 @@
 	.englishLevelTextWrapper>p{
   		@include fsize(13px)
 	}
-	.nom {
-    width: 37vw;
-}
+
 }
 
 @media screen and (max-width:414px){
@@ -272,9 +274,9 @@
 	.englishLevelTextWrapper>p{
   		@include fsize(10px)
 	}
-	.nom {
-    width: 44vw;
-}
+		.imgIT {
+		    height: 39px;
+	}
 }
 
 @media screen and (max-width:375px){
@@ -300,6 +302,9 @@
 	.englishLevelTextWrapper>p{
   		@include fsize(9px);
   		left:26px;
+	}
+	.imgIT {
+		    height: 39px;
 	}
 }
 
@@ -336,7 +341,5 @@
   		@include fsize(8px);
   		left:26px;
 	}
-	.nom {
-    width: 46vw;
-}
+
 }

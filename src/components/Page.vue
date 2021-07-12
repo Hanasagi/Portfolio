@@ -25,28 +25,18 @@ export default {
     this.fillSkillsSection()
     this.fillEducation()
     this.fillAboutMeSection()
-    this.fillProjectSection()   
+    this.fillProjectSection()  
   },
   methods: {
     fillSkillsSection() {
-      let wrapperDiv = document.createElement("div")
-      wrapperDiv.className = "wrapperDivSkills"
-      let baseDiv = document.createElement("div")
-      baseDiv.className = "baseDivSkills"
-      wrapperDiv.append(baseDiv, baseDiv.cloneNode(true), baseDiv.cloneNode(true))
-      this.cssText(wrapperDiv.childNodes[0], "grid-area: a;")
-      this.cssText(wrapperDiv.childNodes[1], "grid-area: b;")
-      this.cssText(wrapperDiv.childNodes[2], "grid-area: d;")
-      let k = 0
+      let wrapperDiv = this.$refs.wrapperDivSkills
+      let k = 1
       for (let i in skills) {
-        let wrapperGrid = document.createElement("div")
-        wrapperGrid.className = "gridSkills"
+        let wrapperGrid = this.$refs.gridSkills
         skills[i].forEach((e, j) => {
           let wrapper = document.createElement("div")
           this.cssText(wrapper, "display:flex;flex-direction:column;justify-content:center;")
-          if (i !== "language") {
-            wrapperDiv = this.fillITSkills(e, j, k, document.createElement("p"), wrapper, wrapperGrid, wrapperDiv)
-          } else {
+          if (i === "language") {
             wrapperDiv = this.fillLanguageSkills(e, j, k, document.createElement("p"), wrapper, wrapperGrid, wrapperDiv)
           }
         })
@@ -76,46 +66,6 @@ export default {
       });
       barW.animate(((levelW.className/maxPoint)*100)/100); 
       barR.animate(((levelR.className/maxPoint)*100)/100); 
-    },
-    fillITSkills(e, j, k, name, wrapper, wrapperGrid, wrapperDiv) {
-      let progressBar = document.createElement("div")
-      let progressValue = document.createElement("div")
-      let progressValueText = document.createElement("div")
-      let yetAnotherDiv = document.createElement("div")
-      progressValueText.innerText = e.level + "%"
-      progressValueText.style.cssText = "opacity:0.7"
-      name.innerText = e.name;
-      progressBar.className = `progressBar`
-      progressValue.className = "progressValue"
-
-      progressValue.style.cssText += `animation: load_${k}${j} 3s normal forwards;`
-      yetAnotherDiv.className = "elemDiv"
-      var style = document.createElement('style');
-      var keyFrames = `
-              @-webkit-keyframes load_${k}${j}{
-                  0% {
-                    width: 0%;
-                  }
-                  100% {
-                      width: ${e.level}%;
-                  }
-              }
-              @-moz-keyframes load {
-                   0% {
-                    width: 0%;
-                  }
-                  100% {
-                      width: ${e.level}%;
-                  }
-              }`;
-      style.innerHTML = keyFrames;
-      document.head.appendChild(style);
-      progressBar.append(progressValue, progressValueText)
-      yetAnotherDiv.append(name, progressBar)
-      wrapper.append(yetAnotherDiv)
-      wrapperGrid.append(wrapper)
-      wrapperDiv.childNodes[k].append(wrapperGrid)
-      return wrapperDiv
     },
     fillLanguageSkills(e, j, k, name, wrapper, wrapperGrid, wrapperDiv) {
       let yetAnotherDivStrikeBack = document.createElement("div")
@@ -197,13 +147,9 @@ export default {
       this.$refs.aboutMeText.innerText = aboutMe.about
     },
     fillProjectSection() {
-      project["projet-cours"].forEach((e) => {
+      project["projet"].forEach((e) => {
         let schoolProject = this.createProjectElem(e,this.$refs.schoolProject)
         this.$refs.schoolProject.append(schoolProject)
-      })
-      project["projet-perso"].forEach((e) => {
-        let personalProject = this.createProjectElem(e,this.$refs.personalProject)
-        this.$refs.personalProject.append(personalProject)
       })
     },
     createProjectElem(e,p){
@@ -211,55 +157,37 @@ export default {
       project.className="projectElem"
       let title1= document.createElement("p")
       let title2= document.createElement("p")
+      let language= document.createElement("p")
+      language.className="projectLangage"
       this.cssText(title2,"display:none;")
       let nameSplit=e.name.split("-")
       title1.innerText=nameSplit[0]
       title2.innerText=nameSplit[1]
+      language.innerText=e.langage
       let projectDesc=this.createProjectDescDiv(title2,e)
       project.addEventListener("mouseover",()=>{
         this.cssText(project,"cursor: pointer;")
         this.cssText(title1,"display:none;")
         this.cssText(title2,"display:flex;")
+        this.cssText(language,"display:none;")
       })
       project.addEventListener("mouseleave",()=>{
         this.cssText(title1,"display:flex;")
         this.cssText(title2,"display:none;")
+        this.cssText(language,"display:flex;")
       })
       project.addEventListener("click",()=>{
         this.cssText(projectDesc,"display:flex;")
       })
       p.append(projectDesc)
-      project.append(title1,title2)
+      project.append(title1,title2,language)
       return project
     },
     cssText(elem, css) {
       elem.style.cssText = css
     },
-    changeProjectType(type){
-      if(type=="school"){
-        this.$refs.schoolProjectTitle.classList.add("active")
-        this.$refs.personalProjectTitle.classList.remove("active")
-        if(window.innerWidth>600){
-          this.cssText(this.$refs.schoolProject,"display:flex")
-        }else{
-          this.cssText(this.$refs.schoolProject,"display:grid")
-        }
-        this.cssText(this.$refs.personalProject,"display:none")
-      }else{
-        this.$refs.schoolProjectTitle.classList.remove("active")
-        this.$refs.personalProjectTitle.classList.add("active")
-         if(window.innerWidth>600){
-          this.cssText(this.$refs.personalProject,"display:flex")
-        }else{
-          this.cssText(this.$refs.personalProject,"display:grid")
-        }
-        this.cssText(this.$refs.schoolProject,"display:none")
-      }
-    },
     closeProjectDesc(e){
-      console.log(e.target)
       if(e.target.nodeName=="path"){
-        console.log(e.target.parentNode.parentNode.parentNode)
         this.cssText(e.target.parentNode.parentNode,"display:none")
       }else{
         this.cssText(e.target.parentNode,"display:none")
@@ -270,7 +198,7 @@ export default {
       let projectDesc= document.createElement("div")
       let svg = document.querySelector("svg#closeButton")
       let clonedSVG=svg.cloneNode(true)
-      this.cssText(clonedSVG,"display:initial")
+      this.cssText(clonedSVG,"display:initial;cursor:pointer;")
       clonedSVG.onclick=this.closeProjectDesc
       projectDesc.className="projectWrapper projectDesc"
       this.cssText(projectDesc,"display:none;")
@@ -289,10 +217,6 @@ export default {
         projectDesc.append(link)
       }
       return projectDesc
-    },
-    toNextDiv(){
-      console.log("fdp")
-      window.scrollBy(0, window.innerHeight);
     },
     isElementInViewport (el) {
         var rect = el.getBoundingClientRect();
