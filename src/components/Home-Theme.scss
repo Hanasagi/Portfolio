@@ -1,0 +1,27 @@
+$mainColor:#8E36FF;
+$backgroundColor:rgba(142, 54, 255, 0.4);
+$backgroundColorFull:rgba(142, 54, 255, 1);
+$containerColor:#222222;
+
+
+[theme="basic"]{
+	--themeColor:#3d00f9;
+}
+
+[theme="orange"]{
+	--themeColor:#FF4E00;
+}
+
+[theme="blue"]{
+	--themeColor:#00AEFF;
+}
+[theme="yellow"]{
+	--themeColor:#FFC600;
+}
+[theme="red"]{
+	--themeColor:#FF0048;
+}
+[theme="magenta"]{
+	--themeColor:#C200E5;
+}
+

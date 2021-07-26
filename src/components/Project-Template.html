@@ -1,0 +1,28 @@
+  <div class="project-main" ref="main" theme="magenta">
+    <div class="darken-background" ref="darken_background" @click="closeProjectDesc"></div>
+    <div ref="container" class="project-container root-container-clip-path blur">
+      <router-link to="/info" class="back"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M0 12l9-8v6h15v4h-15v6z"/></svg></router-link>
+      <p class="project-title">projets</p>
+      <div class="flex-wrap">
+        <div class="project-grid" ref="project_grid">
+          <div @click="showProjectDesc" class="project-elem" :id="setId(p.id)" :ref="setId(p.id)" v-for="p in project['projet']" :key="p">
+            <img :src="getImgUrl(p.img)" class="project-img"/>
+            <p class="project-text">{{p.name}}</p>
+          </div>
+        </div>
+
+    </div>
+  </div>
+   <div class="project-elem-desc hidden-project-desc" :id="setId(p.id,'_desc')" :ref="setId(p.id,'_desc')" v-for="p in project['projet']" :key="p">
+            <button class="close_desc" @click="closeProjectDesc"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z"/></svg></button>
+            <img :src="getImgUrl(p.img)" class="project-img-desc"/>
+            <div class="inline-desc">
+              <div>
+            <a class="desc-link" :href="p.github" target="_blank"><button class="desc-button">Voir sur GitHub</button></a>
+            <a class="desc-link" :href="p.link" target="_blank"><button class="desc-button" v-if="p.link !== ''">Voir le site</button></a>
+          </div>
+            <p class="project-text">Langue: <span style="color: var(--themeColor)">{{p.langage}}</span></p>
+            <p class="project-text">{{p.name}}</p>
+          </div>
+          </div>
+  </div>
