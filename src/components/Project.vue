@@ -66,7 +66,17 @@ export default {
           }
         })
       }
-    }
+    },
+    disableBlur(e){
+      let el=this.$refs.container
+      if(e.target.checked){
+          el.classList.remove("noblur")
+          el.classList.add("blur")
+      }else{
+          el.classList.add("noblur")
+          el.classList.remove("blur")
+      }
+    },
   }
 }
 </script>

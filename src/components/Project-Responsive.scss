@@ -36,7 +36,7 @@
     font-size: 12px;
   }
   .project-img-desc,.project-elem-desc {
-    width: 86vw;
+    width: 70vw;
   }
 
 }
@@ -55,6 +55,9 @@
   .project-img-desc {
     width: 96vw;
     max-height: 46vh;
+  }
+  .blurSwitch{
+    display:none;
   }
 }
 

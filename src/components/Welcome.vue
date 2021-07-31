@@ -1,16 +1,11 @@
 <template>
   <div class="message-wrapper">
-
-    <router-link to="/info"><button type="button" ref="router" style="visibility:hidden;"></button></router-link>
     <div ref="container" class="message root-container-clip-path">Bonjour, je m'appelle <br /><span class="name">Quentin Levenard</span></div>
     <div class="progressBar">
       <div ref="progressValue" class="progressValue"></div>
     </div>
   </div>
 </template>
-
-
-
 
 <script type="text/javascript">
 	export default{
@@ -28,7 +23,7 @@
 				if(progress===100){
 					clearInterval(loading);
 					setTimeout(()=>{
-						this.$refs.router.click()
+						this.$emit('changeCurrent',"home")
 					},500)
 					
 				}
@@ -81,7 +76,7 @@ body{
 }
 @media screen and (max-width:2000px) {
 	.message-wrapper{
-		font-size:25px;
+		font-size:24px;
 	}
 }
 @media screen and (max-width:1700px) {

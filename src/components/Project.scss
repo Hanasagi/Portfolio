@@ -37,6 +37,15 @@ a {
   }
 }
 
+.blurSwitch{
+    position: absolute;
+    right: 1em;
+    top: 0.5em;
+}
+input:checked+.project-switch{
+  background:#68007b;
+}
+
 .project-main {
   display: flex;
   justify-content: center;
@@ -65,6 +74,7 @@ a {
 .project-container {
   width: 98vw;
   height: 98vh;
+  position: relative;
 }
 
 .project-grid {

@@ -5,7 +5,7 @@
          "name":"Projet de DUT Fin d'Étude",
          "link":"https://hanasagi.github.io/",
          "langage":"Javascript",
-         "img":"screenshot/transition.png",
+         "img":"screenshot/transition.webp",
          "github":"https://github.com/Hanasagi/transitionJS/tree/Quentin"
       },
       {
@@ -13,7 +13,7 @@
          "name":"Site Blindtest",
          "link":"",
          "langage":"React, Sprint Boot",
-         "img":"screenshot/noimg.png",
+         "img":"screenshot/noimg.webp",
          "github":"https://github.com/Hanasagi/Mekura-Website"
       },
       {
@@ -21,7 +21,7 @@
          "name":"Extension Chrome",
          "link":"",
          "langage":"Vue",
-         "img":"screenshot/pixivoverlay.png",
+         "img":"screenshot/pixivoverlay.webp",
          "github":"https://github.com/Hanasagi/PixivImageOverlay"
       },
       {
@@ -29,7 +29,7 @@
          "name":"Challenge Frontend-Mentor",
          "link":"https://calculator-hanasagi.netlify.app",
          "langage":"Vue, Sass",
-         "img":"screenshot/calculator.png",
+         "img":"screenshot/calculator.webp",
          "github":"https://github.com/Hanasagi/Calculator-App-Frontend-Mentor"
       },
       {
@@ -37,7 +37,7 @@
          "name":"Challenge Frontend-Mentor",
          "link":"https://countdown-hanasagi.netlify.app",
          "langage":"Vue, Sass",
-         "img":"screenshot/countdown.png",
+         "img":"screenshot/countdown.webp",
          "github":"https://github.com/Hanasagi/Launch-Countdown-FrontedMentor"
       }
    ]

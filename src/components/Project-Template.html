@@ -1,12 +1,18 @@
   <div class="project-main" ref="main" theme="magenta">
     <div class="darken-background" ref="darken_background" @click="closeProjectDesc"></div>
     <div ref="container" class="project-container root-container-clip-path blur">
-      <router-link to="/info" class="back"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M0 12l9-8v6h15v4h-15v6z"/></svg></router-link>
+      <a class="back" @click="this.$emit('changeCurrent','home')"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M0 12l9-8v6h15v4h-15v6z"/></svg></a>
+      <div class="blurSwitch" ref="switch_input">
+              <label class="switch" >
+                <input type="checkbox"  style="visibility: hidden;" @click="disableBlur" checked>
+                <span class="slider round project-switch"></span>
+              </label>
+            </div>
       <p class="project-title">projets</p>
       <div class="flex-wrap">
         <div class="project-grid" ref="project_grid">
           <div @click="showProjectDesc" class="project-elem" :id="setId(p.id)" :ref="setId(p.id)" v-for="p in project['projet']" :key="p">
-            <img :src="getImgUrl(p.img)" class="project-img"/>
+            <img :src="getImgUrl(p.img)" class="project-img" loading="lazy"/>
             <p class="project-text">{{p.name}}</p>
           </div>
         </div>
@@ -25,4 +31,13 @@
             <p class="project-text">{{p.name}}</p>
           </div>
           </div>
+           <div class="mobile-bottom-menu" hidden>
+    <a class="mobile-bottom-menu-button" @click="scrollToContact">Contact</a>
+    <div class="mobile-bottom-menu-switch">
+      <label class="switch-mobile">
+        <input type="checkbox" style="visibility: hidden;" @click="disableBlur" checked>
+        <span class="slider round"></span>
+      </label>
+    </div>
+  </div>
   </div>
