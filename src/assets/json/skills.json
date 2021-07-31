@@ -2,57 +2,57 @@
    "langage-it-exp":[
       {
          "name":"HTML/CSS/JS",
-         "image":"logo/html_css_js.webp"
+         "image":"logo/html_css_js.png"
       },
       {
          "name":"SASS",
-         "image":"logo/sass.webp"
+         "image":"logo/sass.png"
       },
       {
          "name":"Java",
-         "image":"logo/java.webp"
+         "image":"logo/java.png"
       },
       {
          "name":"Python",
-         "image":"logo/python.webp"
+         "image":"logo/python.png"
       },
       {
          "name":"SQL",
-         "image":"logo/sql.webp"
+         "image":"logo/sql.png"
       }
    ],
    "langage-it-fam":[
       {
          "name":"PHP7",
-         "image":"logo/php.webp"
+         "image":"logo/php.png"
       },
       {
          "name":"React",
-         "image":"logo/react.webp"
+         "image":"logo/react.png"
       },
       {
          "name":"Vue",
-         "image":"logo/vue.webp"
+         "image":"logo/vue.png"
       },
       {
          "name":"Node JS",
-         "image":"logo/nodejs.webp"
+         "image":"logo/nodejs.png"
       },
       {
          "name":"Spring Boot",
-         "image":"logo/spring.webp"
+         "image":"logo/spring.png"
       },
       {
          "name":"Bootstrap",
-         "image":"logo/bootstrap.webp"
+         "image":"logo/bootstrap.png"
       },
        {
          "name":"Docker",
-         "image":"logo/docker.webp"
+         "image":"logo/docker.png"
       },
       {
          "name":"Git",
-         "image":"logo/git.webp"
+         "image":"logo/git.png"
       }
    ],
    "langage":[
