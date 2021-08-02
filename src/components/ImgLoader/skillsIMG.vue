@@ -1,5 +1,5 @@
 <template>
-	<img class="logo" v-for="s in imgSource" :key="s" :src="require('@/assets/'+s.image)" width="24" height="24" defer/>
+	<img alt="logo" class="logo" v-for="s in imgSource" :key="s" :src="require('@/assets/'+s.image)" width="24" height="24" defer/>
 	<div></div>
 </template>
 

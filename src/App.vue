@@ -2,6 +2,16 @@
   <router-view/>
 </template>
 
+<script type="text/javascript">
+  export default{
+    name:'App',
+    created() {
+      const html = document.documentElement // returns the html tag
+      html.setAttribute('lang', 'fr')
+    }
+  }
+</script>
+
 <style lang="scss">
 #app {
   -webkit-font-smoothing: antialiased;
