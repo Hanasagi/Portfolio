@@ -1,0 +1,2 @@
+# Redirects from what the browser requests to what we serve
+/tictactoe https://tic-tac-toe-ql.netlify.app/
