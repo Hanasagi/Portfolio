@@ -1,0 +1,98 @@
+@media screen and (max-width: 2560px) {
+}
+@media screen and (max-width: 2400px) {
+}
+
+@media screen and (max-width: 2000px) {
+}
+
+@media screen and (max-width: 1500px) {
+}
+@media screen and (max-width: 1500px) {
+}
+
+@media screen and (max-width: 1300px) {
+}
+
+@media screen and (max-width: 1000px) {
+  .aboutMeNotInViewport {
+    transform: translateX(-60vh);
+  }
+  .pc-header {
+    display: none;
+  }
+  .mobile-header {
+    display: block;
+  }
+  section.skills > div,
+  section.about-me > p,
+  .contact-grid div {
+    width: 90%;
+  }
+  section.intro > h1 {
+    font-size: 8vw;
+    margin: 4vw auto;
+  }
+  section.intro > div {
+    display: flex;
+    justify-content: space-around;
+  }
+  section > .section-title {
+    top: 2vh;
+    position: relative;
+    font-size: 7vw;
+  }
+  section.about-me > div > p {
+    margin: 6vw auto;
+    font-size: 4vw;
+    width: 100%;
+  }
+  .button {
+    font-size: 2.4vw;
+    padding: 4vw;
+    margin: 0;
+  }
+  section.skills h3 {
+    font-size: 6vw;
+  }
+  section.skills h3 {
+    font-size: 5vw;
+  }
+  section.skills > div:last-of-type > p {
+    font-size: 4vw;
+  }
+  .skills-wrapper > div > div {
+    width: 16vw;
+    height: 16vw;
+    margin: 1vw;
+  }
+  .skills-wrapper > div > div > p {
+    font-size: 2.5vw;
+  }
+  .project-wrapper {
+    display: block;
+  }
+  .project-wrapper > div {
+    margin: 6vw auto;
+  }
+  .project-wrapper > div > a {
+    font-size: 6vw;
+  }
+  .project-wrapper > div > h3 {
+    font-size: 3vw;
+  }
+  .contact-grid {
+    display: block;
+  }
+  .contact-grid a {
+    margin: 4vw 0;
+    font-size: 6vw;
+  }
+  .contact-grid form,
+  .contact-grid div {
+    margin: auto;
+  }
+  .contact-grid > div {
+    font-size: 6vw;
+  }
+}

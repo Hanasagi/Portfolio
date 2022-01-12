@@ -1,0 +1,534 @@
+.home {
+  width: auto;
+  height: auto;
+}
+header,
+.mobile-header {
+  position: sticky;
+  z-index: 50;
+}
+header ~ a:focus {
+  outline: 1px solid var(--first-color);
+}
+:focus {
+  outline: none;
+}
+.pc-header:focus-within {
+  outline: 1px solid var(--first-color);
+}
+.mobile-header {
+  display: none;
+  font-family: "Raleway";
+}
+.mobile-header > div {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: var(--second-color);
+}
+.mobile-header > div > svg,
+.mobile-header > svg {
+  width: 5vw;
+  fill: white;
+  position: fixed;
+  top: 1vw;
+  right: 1vw;
+  cursor: pointer;
+}
+.mobile-header > div > svg {
+  z-index: 51;
+}
+.mobile-header a {
+  font-weight: bold;
+  font-size: 4vw;
+  display: block;
+  margin: 1vw 0;
+}
+.mobile-contact {
+  display: flex;
+  align-items: center;
+}
+.mobile-contact svg {
+  width: 5vw;
+  margin: 0 1vw;
+}
+header > .wrapper {
+  position: fixed;
+  font-family: "Raleway";
+}
+header > .wrapper > div > h3 {
+  background: var(--main-gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.header-contact {
+  position: fixed;
+  right: 0;
+}
+header > .wrapper {
+  display: grid;
+}
+header a {
+  cursor: pointer;
+  font-size: 1vw;
+}
+header > .wrapper > div:not([class="scrolltoTop"]),
+.header-contact {
+  display: flex;
+}
+header > .wrapper > div {
+  align-items: center;
+}
+header > .wrapper > div:first-of-type * {
+  margin: 1vw;
+}
+header > .wrapper > div:nth-child(1),
+header > .wrapper > div:nth-child(2) {
+  clip-path: polygon(100% 0, 0 0, 0 0, 100% 0);
+  animation: showHeaderOnEntry 1s forwards 5s;
+}
+@keyframes showHeaderOnEntry {
+  99% {
+    clip-path: polygon(100% 0, 0 0, 0 100%, 100% 100%);
+  }
+  100% {
+    clip-path: unset;
+  }
+}
+.header-contact > * {
+  margin: 0.5vw;
+}
+.header-contact svg {
+  width: 2vw;
+  height: auto;
+}
+.header-contact svg path {
+  fill: var(--second-color);
+}
+.scrolltoTop {
+  position: fixed;
+  bottom: 1vw;
+  right: 2vw;
+  width: 3vw;
+  height: 3vw;
+  border-radius: 50%;
+  outline: 1px solid var(--first-color);
+  justify-content: center;
+  transition: background 0.3s ease-out, transform 0.3s ease-out,
+    outline 0.3s ease-out;
+  cursor: pointer;
+}
+.scrolltoTop:hover,
+.scrolltoTop:focus {
+  background: var(--second-color);
+  outline: unset;
+  transform: scale(1.1);
+}
+.scrolltoTop:hover > svg,
+.scrolltoTop:focus > svg {
+  transform: scale(1.1);
+}
+.scrolltoTop > svg {
+  transition: transform 0.3s ease-out;
+  width: 1vw;
+  pointer-events: none;
+  fill: white;
+}
+
+.current:before {
+  content: attr(data-text);
+  position: absolute;
+  background: var(--main-gradient);
+  filter: blur(5px);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-stroke: 2px transparent;
+  z-index: -1;
+}
+section {
+  width: 100vw;
+  height: 100vh;
+  scroll-snap-align: center;
+  position: relative;
+  z-index: 10;
+}
+section > .section-title {
+  font-size: 4vw;
+  font-weight: 800;
+  font-family: "Work Sans", sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  background: var(--main-gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: background 0.4s ease-out;
+}
+.section-title:focus {
+  outline: 1px solid var(--first-color);
+}
+section.intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+section.intro > h1 {
+  font-weight: lighter;
+  font-size: 5vw;
+  font-family: "Manrope";
+  margin: 1vw auto;
+  width: 90%;
+}
+section.intro > h1 > div > span {
+  font-weight: 700;
+  animation: showGradient 0.5s forwards 5s;
+}
+section.intro > h1 > div:first-of-type {
+  position: relative;
+  animation: animateHelloOnEnter 5s forwards;
+}
+section.intro > h1 > div:last-of-type {
+  animation: animateTextOnEnter 2s forwards 4s;
+  clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+}
+@keyframes animateHelloOnEnter {
+  0% {
+    font-size: 9vw;
+    left: 20vw;
+    top: 100vh;
+  }
+  50% {
+    font-size: 9vw;
+    left: 20vw;
+    top: 20vh;
+  }
+  100% {
+    font-size: 5vw;
+    left: 0;
+    top: 0;
+  }
+}
+@keyframes animateTextOnEnter {
+  99% {
+    clip-path: polygon(100% 0, 0 0, 0 100%, 100% 100%);
+  }
+  100% {
+    clip-path: unset;
+  }
+}
+@keyframes showGradient {
+  0% {
+    background: white;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  100% {
+    background: var(--main-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display:inline;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+  }
+}
+section.intro > div:last-of-type {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.button {
+  padding: 1vw;
+  font-size: 2vw;
+  margin: 1vw;
+  background: none;
+  font-family: "Raleway", sans-serif;
+  text-transform: uppercase;
+  cursor: pointer;
+  clip-path: polygon(50% 0, 50% 0, 50% 100%, 50% 100%);
+  animation: showButtonOnEntry 1s forwards 5s;
+}
+@keyframes showButtonOnEntry {
+  99% {
+    clip-path: polygon(100% 0, 0 0, 0 100%, 100% 100%);
+  }
+  100% {
+    clip-path: unset;
+  }
+}
+.my-project {
+  border: 1px solid var(--first-color);
+  color: var(--first-color);
+  transition: background 0.2s ease-in, box-shadow 0.2s ease-in,
+    color 0.2s ease-in;
+}
+.my-project:hover,
+.my-project:focus {
+  color: white;
+  background: var(--first-color);
+  box-shadow: 0 0 0.5vw var(--first-color), 0 0 1.2vw var(--first-color),
+    0 0 2.5vw var(--first-color);
+  -moz-box-shadow: 0 0 0.5vw var(--first-color), 0 0 1.2vw var(--first-color),
+    0 0 2.5vw var(--first-color);
+}
+.contact-me {
+  border: 1px solid #de38c8;
+  color: #de38c8;
+  transition: background 0.2s ease-in, box-shadow 0.2s ease-in,
+    color 0.2s ease-in;
+}
+.contact-me:hover,
+.contact-me:focus {
+  color: white;
+  background: #de38c8;
+  box-shadow: 0 0 0.5vw #de38c8, 0 0 1.2vw #de38c8, 0 0 2.5vw #de38c8;
+  -moz-box-shadow: 0 0 0.5vw #de38c8, 0 0 1.2vw #de38c8, 0 0 2.5vw #de38c8;
+}
+.dl-cv {
+  border: 1px solid var(--second-color);
+  color: var(--second-color);
+  transition: background 0.2s ease-in, box-shadow 0.2s ease-in,
+    color 0.2s ease-in;
+}
+.dl-cv:hover,
+.dl-cv:focus {
+  color: white;
+  background: var(--second-color);
+  box-shadow: 0 0 0.5vw var(--second-color), 0 0 1.2vw var(--second-color),
+    0 0 2.5vw var(--second-color);
+  -moz-box-shadow: 0 0 0.5vw var(--second-color), 0 0 1.2vw var(--second-color),
+    0 0 2.5vw var(--second-color);
+}
+section.about-me > div {
+  width: 90%;
+  margin: 0 auto;
+}
+section.about-me > div > p {
+  font-family: "Manrope";
+  font-size: 1.5vw;
+  width: 47%;
+  position: relative;
+}
+section.about-me > div > p:nth-child(1) {
+  transition: transform 1s ease-out;
+}
+section.about-me > div > p:nth-child(2) {
+  transition: transform 1s ease-out 0.2s;
+}
+section.about-me > div > p:nth-child(3) {
+  transition: transform 1s ease-out 0.4s;
+}
+.aboutMeNotInViewport {
+  transform: translateX(-50vw);
+  -webkit-transform: translateX(-50vw);
+  -ms-transform: translateX(-50vw);
+}
+.aboutMeTransitionViewport {
+  transform: translateX(0);
+  -webkit-transform: translateX(0);
+  -ms-transform: translateX(0);
+}
+section.skills {
+  height: 100vh;
+}
+section.skills > div:first-of-type {
+  height: auto;
+}
+section.skills > div {
+  margin: 2vw auto;
+  width: 90%;
+}
+section.skills h3 {
+  margin: 0;
+  font-size: 3vw;
+  font-family: "Work Sans", sans-serif;
+  text-transform: uppercase;
+}
+section.skills > div:first-of-type > h3 {
+  color: var(--first-color);
+}
+section.skills > div:last-of-type > h3 {
+  color: var(--second-color);
+}
+section.skills h4 {
+  margin: 1vw;
+  font-size: 2vw;
+  font-weight: lighter;
+  font-family: "Raleway";
+}
+section.skills > div:last-of-type > p {
+  font-family: "Manrope";
+  font-size: 1vw;
+}
+
+.skills-wrapper > div {
+  width: 100%;
+  height: 100%;
+}
+.skills-wrapper > div > div {
+  font-family: "Raleway";
+  position: relative;
+  width: 5vw;
+  height: 5vw;
+  margin: 1vw;
+  border: 1px solid #231622;
+  display: inline-grid;
+  border-radius: 50%;
+}
+.skills-wrapper > div > div > p {
+  font-size: 0.9vw;
+  display: grid;
+  place-content: center;
+  color: #b3b3b3;
+  transition: color 0.3s ease-out 0.5s;
+}
+.lang .second {
+  color: var(--second-color);
+  font-weight: bold;
+}
+.lang .first {
+  color: var(--first-color);
+  font-weight: bold;
+}
+
+.skillsWrapperNotInViewport {
+  clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+}
+.skillsWrapperInViewport {
+  animation: skillsEnter 1s ease-out forwards;
+  clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+}
+.skillsNotInViewport {
+  transform: scale(0);
+  -webkit-transform: scale(0);
+  -ms-transform: scale(0);
+}
+.skillsInViewport {
+  transform: scale(1);
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+}
+
+@keyframes skillsEnter {
+  99% {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+  100% {
+    clip-path: unset;
+  }
+}
+section.projects {
+  position: relative;
+}
+
+.project-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1vw;
+}
+.project-wrapper > div {
+  padding: 3vw 0;
+  position: relative;
+  cursor: pointer;
+  width: 90%;
+  margin: auto;
+}
+
+.project-wrapper > div > a {
+  transition: margin 0.3s ease-out;
+  font-size: 3vw;
+  font-family: "Work Sans", sans-serif;
+  text-transform: uppercase;
+  font-weight: bold;
+  z-index: 2;
+  position: relative;
+}
+.project-wrapper > div > h3 {
+  font-size: 0.8vw;
+  color: #a7a7a7;
+  font-family: "Manrope";
+  margin: 0;
+}
+.project-wrapper > div:hover > a,
+.project-wrapper > div:focus > a {
+  margin-left: 1vw;
+}
+.project-wrapper > div:hover > h3,
+.project-wrapper > div:focus > h3 {
+  color: var(--first-color);
+  text-shadow: 0 0 1.5vw var(--first-color);
+}
+.project-wrapper > div > img {
+  filter: grayscale(30%);
+  opacity: 0.8;
+  width: 22vw;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.contact-grid > div:first-of-type {
+  font-family: "Work Sans", sans-serif;
+  text-transform: uppercase;
+  margin: 0 5vw;
+}
+
+.contact-form {
+  width: 90%;
+  height: auto;
+  margin: auto;
+  border: 2px solid var(--first-color);
+  padding: 2vw;
+}
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.contact-grid a {
+  margin: 0;
+  margin-bottom: 2vw;
+  font-size: 3vw;
+  cursor: pointer;
+  transition: margin 0.3s ease-out;
+  display: block;
+  font-weight: bold;
+}
+.contact-grid a:hover,
+.contact-grid a:focus {
+  margin-left: 1vw;
+}
+.contact-form > input:not([type="submit"]) {
+  margin: auto;
+  background: none;
+  border: 2px solid var(--second-color);
+  padding: 0.5vw;
+}
+.contact-form > input {
+  color: white;
+  font-family: "Raleway";
+  margin: 1vw 0;
+}
+.contact-form > h3 {
+  font-size: 1vw;
+  margin: 1vw 0;
+  font-family: "Raleway";
+  font-weight: lighter;
+}
+.contact-form > input[type="submit"] {
+  text-transform: uppercase;
+  background: var(--second-color);
+  border: none;
+}
+.contact-form > input {
+  width: 100%;
+}
+.contact-form > input[type="submit"] {
+  padding: 2vw;
+  font-size: 1vw;
+  font-weight: bold;
+}
+.contact-form > input[name="message"] {
+  height: 10vw;
+  padding-bottom: 8vw;
+}

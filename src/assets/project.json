@@ -1,0 +1,146 @@
+{
+	"project":[
+		{
+			"name":"Déplacé Maison",
+			"type":"Copie de Site Web",
+			"url":"deplacemaison",
+			"description":"Déplacé Maison est un site de marque dont j'ai reproduit la page d'accueil avec Vue. Ce site est présenté comme un challenge sur frontendpractice.com et ayant aimé le design du site, je me suis dit que cela pourrait être un bon challenge amusant et ludique.",
+			"goals":"Ce projet avait pour but, en plus de reproduire la mise en page assez unique du site web, d'apprendre à réaliser un curseur \"gluant\" et un slider déplaçable au click.",
+			"problems":"J'ai dû faire face à quelques problèmes concernant les objectifs du projet. Malgré que je sache \"crée\" un curseur personnalisée qui suit la souris, mettre en place l'effet gluant m'a pris quelques essaies pour comprendre la logique.\n\n En plus de cela, malgré avoir réussi à créer l'effet, l'animation était saccadée et j'ai donc réalisé quelques recherches de plus pour comprendre comment rendre ce dernier fluide.\n Pour le slider, c'était la première fois que je réalisais quelque chose du genre et j'ai donc eu du mal à réaliser un slider fluide.",
+			"lessons":"En plus de savoir maintenant réaliser les objectifs donnés et d'avoir compris la logique derrière, j'ai aussi appris à utiliser de nouvelles façons de rendre le responsive design plus simple à mettre en oeuvre.\n\n Je sais aussi maintenant lancer une animation seulement lorsque l'élément apparait sur l'écran et par extension, lié le démarrage d'une animation au scroll. Cette façon d'animer les éléments au scroll m'a d'ailleurs servi dans la création de ce portfolio et sur cette même page.",
+			"stack":[
+				{
+					"name":"Vue"
+				}
+			],
+			"images":[
+				{
+					"name":"dm-copy-1.mp4"
+				},
+				{
+					"name":"dm-copy-2.png"
+				},
+				{
+					"name":"dm-copy-3.png"
+				}
+			],
+			"github":"https://github.com/Hanasagi/DeplaceMaisonCopy",
+			"website":"https://dmcopy.qlevenard.fr/"
+		},
+		{
+			"name":"Pixiv Image Overlay",
+			"type":"Extension Chrome",
+			"url":"pxvImgOverlay",
+			"description":"Pixiv Image Overlay est une extension chrome utilisable sur le site pixiv.net, qui est un site où les artistes (japonais, principalement), peuvent publier leur artworks. C'est aussi un site où je passe pas mal de temps, étant fan du style des dessins style manga/anime et suivant pas mal d'artistes.\n Le site permet de publier une collection d'images navigables soit pas scroll, soit par utilisation de la touche tab et je voulais rajouter cette extension pour apprendre à utiliser Vue et SASS et y rajouter quelques fonctionnalités.",
+			"goals":"Mon réel but était l'apprentissage de Vue et SASS, ainsi qu'apprendre la création d'une extension chrome. Le but de l'extension en elle-même est, comme montrer sur la vidéo au-dessus, de rajouter un overlay sur les pages possédant une collection d'images. Je voulais que les images soient navigables par click ou en utilisant les flèches directionnelles, ou simplement en cliquant sur la navbar.",
+			"problems":"Étant la première fois que j'utilisais Vue et SASS et que je réalisais une extension chrome, les problèmes se sont pas mal accumulés. Devant apprendre à m'en servir, la première version de cette extension n'était pas super bien aboutie.\n\n Ayant acquis plus d'expérience depuis que j'ai réalisé cette première version, je suis revenu sur cette extension pour l'améliorer, notamment au niveau du chargement des images qui étaient un aspect que j'avais négligé la première fois. La première version avait aussi des problèmes au chargement de l'extension, ce dernier se chargeait parfois en double, étant donné que l'extension utilise des appels ajax pour rafraîchir les pages et que j'utilise ce fait pour pouvoir recharger mon extension au besoin, je n'avais encore une fois pas prêté attention à cet aspect au départ. ",
+			"lessons":"La création de cette extension m'a donc permis de mettre un premier pied dans l'utilisation SASS et de Vue et par extension des autres framework JS très similaire. J'ai bien évidemment aussi appris à créer une extension chrome (et à la publier) et est appris d'autres concepts comme le lazy loading d'images.",
+			"stack":[
+				{
+					"name":"Vue"
+				},
+				{
+					"name":"SASS"
+				}
+			],
+			"images":[
+				{
+					"name":"pixiv-overlay.mp4"
+				},
+				{
+					"name":"pixiv-overlay.png"
+				},
+				{
+					"name":"pixiv-overlay-2.png"
+				}
+			],
+			"github":"https://github.com/Hanasagi/PixivImageOverlay",
+			"website":""
+		},
+		{
+			"name":"Spotify Stat",
+			"type":"Site Web",
+			"url":"spotifystat",
+			"description":"Écoutant énormément de musique tous les jours, à pratiquement n'importe quel moment de la journée, Spotify est un logiciel que j'utilise énormément. De ce fait, il m'arrivait de parfois regarder mes statistiques sur mes musiques les plus écoutées sur un autre site. J'ai voulu malgré tout réaliser moi-même un site du même type, cela me permettra par la suite de rajouter des fonctionnalités !\n\n/!\\ L'application est en cours d'approbation par les équipes de Spotify donc elle n'est pas encore testable par tout le monde.",
+			"goals":"Ce projet avait pour but de pouvoir visualiser son top d'artiste et de musique, provenant directement de l'API de Spotify. Ce dernier procure des statistiques sur l'année, les 6 derniers mois et les 4 dernières semaines, et je voulais pouvoir toutes les consulter.\n\n Mon dernier but était d'apprendre les méthodes d'accessibilité, qui était un point sur lequel je manquais d'informations, en les ajoutant à ce projet.",
+			"problems":"Étonnamment, j'ai rencontré peu de problèmes en réalisant ce projet ! J'ai eu un peu de mal à mettre en place l'accès à l'API et quelques problèmes avec mon CSS, mais cela venait juste de petit oublies de ma part.",
+			"lessons":"Au final, la plus grosse leçon que j'ai tiré de ce projet est la mise en place d'élément pour améliorer l'accessibilité de mes projets. Cela m'a aussi sur le portfolio sur lequel vous êtes en train de vous balader !",
+			"stack":[
+				{
+					"name":"Vue"
+				}
+			],
+			"images":[
+				{
+					"name":"spotify-stat-gif.mp4"
+				},
+				{
+					"name":"spotify-stat-page-2.png"
+				},
+				{
+					"name":"spotify-stat-page-3.png"
+				}
+			],
+			"github":"https://github.com/Hanasagi/SpotifyStat",
+			"website":"https://spotifystat.netlify.app/"
+		},
+		{
+			"name":"Workout Assistant",
+			"type":"Site Web",
+			"url":"workoutassistant",
+			"description":"Workout Assistant est, comme son nom l'indique un assistant pour la musculation. Il a d'abord été développé pour mes besoins, mais j'ai prévu de l'améliorer pour y rajouter des fonctionnalités et pour qu'il soit utilisable par tout le monde.",
+			"goals":"Mes premiers besoins étaient d'avoir un chronomètre que je puisse démarrer et mettre en pause au besoin, ainsi que de pouvoir rajouter un temps de repos et être prévenu lorsque celui-ci se termine.\n\n J'avais aussi besoin de pouvoir lister les exercices que je réalisais, ainsi que le nombre de répétitions et de séries et pouvoir modifier et supprimer ces derniers si jamais.",
+			"problems":"Je n'ai pas rencontré de gros problèmes sur ce projet, seulement plusieurs petits problèmes.\n\n Étant donné que beaucoup des fonctionnalités que j'ai ajoutés sont toutes lié d'une certaine façon et que j'ai donc besoin de modifier plusieurs lignes de codes pour que cela fonctionne et il m'arrive parfois d'oublier des bouts ou de ne pas avoir pensé à un problème qui pourrait arriver.\n Je me compliquais aussi trop la tâche sur certaines fonctionnalités.",
+			"lessons":"Comme dit précédemment, je me suis rendu compte que je ne planifiais pas assez clairement mes objectifs à l'avance et que j'ai tendance à vouloir faire plusieurs choses en même temps, ce qui a mené aux problèmes dont j'ai parlé.\n Maintenant que je sais cela, je ferais plus attention sur mes prochains projets.\n Malgré tout, comme dit en introduction, je vais continuer à améliorer ce projet donc j'appliquerais tout cela sur celui-ci.",
+			"stack":[
+				{
+					"name":"Vue"
+				}
+			],
+			"images":[
+				{
+					"name":"workout-assistant-1.mp4"
+				},
+				{
+					"name":"workout-assistant-2.png"
+				},
+				{
+					"name":"workout-assistant-3.png"
+				}
+			],
+			"github":"https://github.com/Hanasagi/WorkoutAssistant",
+			"website":"https://workout-assistant.netlify.app/"
+		},
+		{
+			"name":"Newcastle",
+			"type":"Site Web -- En Cours",
+			"url":"newcastle",
+			"description":"Possédant un bot Discord permettant d'obtenir des informations sur un jeu mobile auquel je jouais, j'ai voulu rendre ce dernier bot public, car il ne servait que sur un serveur dont je suis le propriétaire, j'ai choisi de réaliser un site vitrine pour présenter mon bot et y rajouter un dashboard.\nCe projet étant encore en cours, je n'ai rajouté que les objectifs du projet et les quelques pages que j'ai déjà réalisés en dessous.",
+			"goals":"Ce site vitrine doit donc présenter les fonctionnalités de mon bot, avoir un lien d'invitation de ce dernier sur la page d'accueil, ainsi que rajouter un dashboard permettant de contrôler quelques options du bot sur son serveur Discord.\n\nLes utilisateurs doivent pouvoir se connecter avec leur compte Discord et avoir accès à tous les serveurs ou le bot se trouve et où ils sont administrateurs.",
+			"stack":[
+				{
+					"name":"Vue"
+				},
+				{
+					"name":"SASS"
+				},
+				{
+					"name":"Express"
+				}
+			],
+			"images":[
+				{
+					"name":"newcastle-1.png"
+				},
+				{
+					"name":"newcastle-2.png"
+				},
+				{
+					"name":"newcastle-3.png"
+				}
+			],
+			"github":"",
+			"website":""
+		}
+	]
+}
