@@ -1,0 +1,21 @@
+[theme="dark"]{
+    --background:#272026;
+    --main-text-color:#EBEBEB;
+    --main-text-color-accent:#7F91E2;
+    --main-text-color-highlight:#FF9D5F;
+    --background-accent-transparent:rgba(127,145,226,0.8);
+}
+
+
+@font-face {
+    font-family: "Kempton";
+    src: url("../../assets/Fonts/kempton_handwritting/KemptonDemoHandwritting.ttf");
+}
+@font-face {
+    font-family: "Helvetica Neue";
+    src: url("../../assets/Fonts/helvetica-neue-55-cdnfonts/HelveticaNeueMedium.ttf");
+}
+@font-face {
+    font-family: "Inter";
+    src: url("../../assets/Fonts/Inter-3.19/Inter Desktop/Inter-Regular.otf");
+}
